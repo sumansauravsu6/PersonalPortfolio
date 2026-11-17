@@ -13,7 +13,7 @@ For why it's structured this way, see [PORTFOLIO-RESEARCH.md](PORTFOLIO-RESEARCH
 
 ## Still to do
 1. **Photo:** done (`assets/profile.webp`, cropped from `Downloads/profile.png`). To change it, replace that file with a square image.
-2. **Add a link-preview image:** `assets/og-image.png` (1200×630). A screenshot of the hero works well.
+2. **Link-preview image:** done (`assets/og-image.png`, a 1200×630 screenshot of the live hero). Live site: https://sumansaurav.vercel.app
 3. **Optional:** swap a tile's drawing for a real screenshot by replacing the contents of its `.tile-visual` with `<img src="assets/…" alt="">`.
 4. When the resume changes, replace `assets/Suman_Saurav_Resume.pdf` (keep the same name).
 
