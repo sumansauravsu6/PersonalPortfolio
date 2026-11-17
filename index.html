@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Suman Saurav — Generative AI Engineer</title>
+  <meta name="description" content="Suman Saurav is a Generative AI engineer at Siemens Healthineers who builds AI that works beside people: agents that use the web, assistants that watch and guide real tasks, and grounded RAG that cites its evidence. Projects include AutoForms (a WebMCP polyfill), ScoutAI, Cartographer and EmbedLab." />
+
+  <!-- Link previews (LinkedIn, Slack, WhatsApp). Add a 1200×630 image at assets/og-image.png -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Suman Saurav — Generative AI Engineer" />
+  <meta property="og:description" content="I build AI agents with eyes, hands and manners: they watch your screen and workbench, work the web for you, and stop to ask before anything risky." />
+  <meta property="og:image" content="assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%232443e0'/><circle cx='20' cy='22' r='5' fill='white'/><circle cx='44' cy='18' r='4' fill='white' opacity='.6'/><circle cx='40' cy='44' r='6' fill='%23ffe45c'/><path d='M20 22L40 44M44 18L40 44' stroke='white' stroke-width='2.5'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Suman Saurav",
+    "jobTitle": "Generative AI / Applied AI Engineer",
+    "worksFor": { "@type": "Organization", "name": "Siemens Healthineers" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "National Institute of Technology Rourkela" },
+    "email": "mailto:sumansauravsu9@gmail.com",
+    "image": "assets/profile.webp",
+    "address": { "@type": "PostalAddress", "addressLocality": "Bengaluru", "addressCountry": "IN" },
+    "sameAs": ["https://www.linkedin.com/in/suman-saurav-a98394224/", "https://github.com/sumansauravsu6"],
+    "knowsAbout": ["Generative AI", "Retrieval-Augmented Generation", "AI agents", "Tool calling", "Model Context Protocol", "WebMCP", "LangChain", "Azure OpenAI", "Snowflake Cortex", "PyTorch", "Transformers", "Text embeddings", "LLM evaluation", "Python", "TypeScript"]
+  }
+  </script>
+
+  <script>
+    // Saved theme, else the system setting
+    (function () {
+      var t = localStorage.getItem("theme") || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+      document.documentElement.dataset.theme = t;
+    })();
+  </script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="wrap header-inner">
+      <a href="#top" class="mark" aria-label="Suman Saurav, back to top">SS</a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/Suman_Saurav_Resume.pdf" class="nav-resume" download>Resume</a>
+      </nav>
+
+      <div class="header-tools">
+        <button class="tool-btn" id="theme-toggle" type="button" aria-label="Switch between light and dark theme">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" class="fill"/></svg>
+        </button>
+        <button class="tool-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ═════════════════════════ HERO ═════════════════════════
+         The canvas is an "embedding space": the cursor is a query vector,
+         and its nearest neighbours (skills) light up, like top-k retrieval. -->
+    <section class="hero" id="top">
+      <canvas class="field" id="field" aria-hidden="true"></canvas>
+      <canvas class="field field-top" id="field-top" aria-hidden="true"></canvas>
+
+      <div class="wrap hero-inner">
+        <div class="readout">
+          <p class="lamp-line"><span class="lamp" aria-hidden="true"></span>GenAI engineer at Siemens Healthineers</p>
+          <p class="clock">Bengaluru, <time id="clock">--:--</time></p>
+        </div>
+
+        <h1 class="name" id="name" aria-label="Suman Saurav">
+          <span class="name-line">Suman</span>
+          <span class="name-line">Saurav</span>
+        </h1>
+
+        <div class="hero-foot">
+          <p class="intro">
+            <strong>I build AI agents with <span>eyes, hands and manners.</span></strong>
+            Eyes that watch your screen and your workbench. Hands that work the web for you.
+            Manners to stop and ask before anything risky. <span class="hint">Move your cursor: it's a query, and the points it finds are my skills.</span>
+          </p>
+          <div class="hero-actions">
+            <a href="#work" class="btn btn-solid">See my work</a>
+            <a href="assets/Suman_Saurav_Resume.pdf" class="btn btn-line" download>Download resume (PDF)</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ WORK (bento) ═════════════════════════ -->
+    <section class="block" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <div class="block-head">
+          <h2 id="work-title">Selected work</h2>
+          <p>Four projects I built outside my day job. Open any of them for the full story. Numbers link to their source.</p>
+        </div>
+
+        <div class="bento">
+          <!-- AutoForms -->
+          <article class="tile tile-feature">
+            <figure class="tile-visual viz-bench">
+              <figcaption>Total input tokens to solve 30 tasks on 30 public sites. Lower is better.</figcaption>
+              <ol class="hbars">
+                <li class="me" style="--v:1.94"><span class="hb-name">AutoForms</span><span class="hb-bar"></span><span class="hb-val">1.94M</span></li>
+                <li style="--v:4.41"><span class="hb-name">Playwright MCP</span><span class="hb-bar"></span><span class="hb-val">4.41M</span></li>
+                <li style="--v:5.99"><span class="hb-name">agent-browser</span><span class="hb-bar"></span><span class="hb-val">5.99M</span></li>
+                <li style="--v:6.67"><span class="hb-name">Chrome DevTools MCP</span><span class="hb-bar"></span><span class="hb-val">6.67M</span></li>
+              </ol>
+            </figure>
+            <div class="tile-body">
+              <p class="tile-kicker">2026, open source, Chrome extension and MCP server</p>
+              <h3>AutoForms</h3>
+              <p class="tile-text">Gives AI agents the forms and lists on any web page as clean, typed tools instead of giant page snapshots. It works as a user-side polyfill for the WebMCP API, so sites don't have to change anything.</p>
+              <dl class="kpis">
+                <div><dt>Tasks solved with a real LLM agent</dt><dd>30/30<a class="cite" href="https://github.com/sumansauravsu6/AutoForms/blob/main/bridge/llm-eval/REPORT.md" target="_blank" rel="noopener" aria-label="Source: AutoForms LLM benchmark report">1</a></dd></div>
+                <div><dt>Fewer tokens than Playwright MCP</dt><dd>2.3×<a class="cite" href="https://github.com/sumansauravsu6/AutoForms/blob/main/bridge/llm-eval/REPORT.md" target="_blank" rel="noopener" aria-label="Source: AutoForms LLM benchmark report">1</a></dd></div>
+                <div><dt>Total cost, vs $3.38</dt><dd>$2.22<a class="cite" href="https://github.com/sumansauravsu6/AutoForms/blob/main/bridge/llm-eval/REPORT.md" target="_blank" rel="noopener" aria-label="Source: AutoForms LLM benchmark report">1</a></dd></div>
+              </dl>
+              <ul class="chips" aria-label="Tech stack"><li>JavaScript</li><li>Chrome Extension</li><li>MCP</li><li>WebMCP</li><li>JSON Schema</li><li>Playwright</li></ul>
+              <button class="open-case" type="button" data-case="case-autoforms">Read the case study</button>
+            </div>
+          </article>
+
+          <!-- ScoutAI -->
+          <article class="tile tile-tall">
+            <div class="tile-visual viz-steps" aria-hidden="true">
+              <ol class="steps">
+                <li class="done"><span class="st"></span>Select a cell in your data range</li>
+                <li class="done"><span class="st"></span>Insert a PivotTable on a new sheet</li>
+                <li class="warn"><span class="st"></span>Region went into Values. Drag it into Rows instead.</li>
+                <li class="next"><span class="st"></span>Drag Sales into Values</li>
+              </ol>
+            </div>
+            <div class="tile-body">
+              <p class="tile-kicker">2026, local desktop assistant</p>
+              <h3>ScoutAI</h3>
+              <p class="tile-text">Turns any how-to guide into a live checklist, watches your screen and guides you by voice. It never clicks, types or moves your mouse.</p>
+              <dl class="kpis">
+                <div><dt>Source types turned into checklists</dt><dd>5</dd></div>
+                <div><dt>Voice and models, no cloud needed</dt><dd>Offline</dd></div>
+              </dl>
+              <ul class="chips" aria-label="Tech stack"><li>Python</li><li>PySide6</li><li>UI Automation</li><li>BM25</li><li>Ollama</li><li>Vosk</li></ul>
+              <button class="open-case" type="button" data-case="case-scout">Read the case study</button>
+            </div>
+          </article>
+
+          <!-- Cartographer -->
+          <article class="tile tile-wide">
+            <div class="tile-visual viz-graph" aria-hidden="true">
+              <svg viewBox="0 0 300 220">
+                <g class="edges">
+                  <path d="M60 50L150 60M150 60L240 40M150 60L120 130M150 60L210 120M120 130L70 180M120 130L170 185M210 120L250 180M210 120L170 185"/>
+                </g>
+                <path class="flow" d="M60 50L150 60L210 120L170 185"/>
+                <g class="nodes">
+                  <circle cx="60" cy="50" r="7" class="entry"/><circle cx="150" cy="60" r="9" class="on"/><circle cx="240" cy="40" r="6"/>
+                  <circle cx="120" cy="130" r="7"/><circle cx="210" cy="120" r="8" class="on"/><circle cx="70" cy="180" r="5"/>
+                  <circle cx="170" cy="185" r="7" class="on"/><circle cx="250" cy="180" r="5"/>
+                </g>
+                <g class="labels">
+                  <text x="22" y="34">main.py</text><text x="160" y="74">api/routes</text><text x="218" y="112">services</text><text x="180" y="208">graph/builder</text>
+                </g>
+              </svg>
+            </div>
+            <div class="tile-body">
+              <p class="tile-kicker">2026, codebase onboarding agent</p>
+              <h3>Cartographer</h3>
+              <p class="tile-text">Maps a codebase into dependency graphs and execution flows from static analysis. Its LLM explanations must cite source lines, or they're dropped.</p>
+              <dl class="kpis">
+                <div><dt>Languages: Python, JS, TS/TSX</dt><dd>3</dd></div>
+                <div><dt>Every LLM claim, or it's rejected</dt><dd>Cited</dd></div>
+              </dl>
+              <button class="open-case" type="button" data-case="case-carto">Read the case study</button>
+            </div>
+          </article>
+
+          <!-- EmbedLab -->
+          <article class="tile tile-side">
+            <div class="tile-visual viz-vec" aria-hidden="true">
+              <p class="vec-label">"A cat rests on the sofa."</p>
+              <div class="vec" data-seed="7"></div>
+              <p class="vec-label">"A kitten is sitting on a couch."</p>
+              <div class="vec" data-seed="7" data-jitter="1"></div>
+            </div>
+            <div class="tile-body">
+              <p class="tile-kicker">2026, model training from scratch</p>
+              <h3>EmbedLab</h3>
+              <p class="tile-text">A compact text-embedding model trained without pretrained weights: its own tokenizer, masked language modelling, then contrastive learning.</p>
+              <dl class="kpis">
+                <div><dt>Transformer layers</dt><dd>4</dd></div>
+                <div><dt>Normalized embeddings</dt><dd>256-d</dd></div>
+              </dl>
+              <button class="open-case" type="button" data-case="case-embed">Read the case study</button>
+            </div>
+          </article>
+
+          <!-- Toolkit -->
+          <aside class="tile tile-tools" aria-labelledby="tools-title">
+            <h3 id="tools-title">Toolkit</h3>
+            <dl class="toolkit">
+              <div><dt>GenAI</dt><dd>LangChain, Azure OpenAI, RAG, agentic workflows, tool calling, MCP, LLM evaluation</dd></div>
+              <div><dt>Retrieval and data</dt><dd>Azure AI Search, Snowflake Cortex Agents, ChromaDB, BM25, hybrid retrieval, Docling</dd></div>
+              <div><dt>Machine learning</dt><dd>PyTorch, Transformers, text embeddings, contrastive learning, masked language modelling</dd></div>
+              <div><dt>Languages</dt><dd>Python, TypeScript, C++, SQL, C#</dd></div>
+              <div><dt>Building</dt><dd>FastAPI, Flask, React, Node.js, Streamlit, REST APIs, Git</dd></div>
+            </dl>
+          </aside>
+        </div>
+
+        <div class="more">
+          <h3>More with live demos</h3>
+          <ul>
+            <li><a href="https://doc-gbt.vercel.app" target="_blank" rel="noopener">DocGPT</a><span>Each uploaded PDF becomes its own chat assistant. RAG with ChromaDB, Flask and React.</span></li>
+            <li><a href="https://cryptochatbot-pi.vercel.app" target="_blank" rel="noopener">Crypto and currency chatbot</a><span>Tool calling over live price APIs with Llama 3.3 70B, plus generated charts.</span></li>
+            <li><a href="https://github.com/sumansauravsu6" target="_blank" rel="noopener">All repositories on GitHub</a><span>16 public repositories.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ CASE STUDY PANELS ═════════════════════════ -->
+    <dialog class="case" id="case-autoforms" aria-labelledby="case-autoforms-title">
+      <div class="case-inner">
+        <button class="case-close" type="button" aria-label="Close case study">×</button>
+        <p class="tile-kicker">2026, open source</p>
+        <h2 id="case-autoforms-title">AutoForms</h2>
+        <p class="case-lead">Web pages as typed tools for AI agents. A user-side polyfill for WebMCP.</p>
+        <h3>Problem</h3>
+        <p>Browser agents usually see a web page as a huge accessibility snapshot. They spend most of their tokens reading it, then click and type one element at a time. Forms built with React, Vue or custom dropdowns often don't register the values, and the agent can't tell. WebMCP lets sites expose their own tools to agents, but almost no sites do this yet.</p>
+        <h3>What I built</h3>
+        <ul>
+          <li>A Chrome extension that finds every form on a page, including inputs outside a <code>&lt;form&gt;</code> tag and inside shadow roots. It turns each one into a named tool with a JSON Schema: types, required fields, options and patterns.</li>
+          <li>Support for enhanced dropdowns (select2, Chosen, Tom Select, MUI comboboxes and more). It fills fields the way a person would, reads each value back, and reports the outcome: submitted, validation failed with per-field errors, or needs the user.</li>
+          <li>Result lists returned as structured data (products, jobs, search hits), with automatic "Load more".</li>
+          <li>A local MCP server bridge on <code>127.0.0.1</code> that only accepts connections from the extension. Passwords, card numbers and one-time codes are never sent to the agent; the person types them.</li>
+          <li>Forms that already declare WebMCP <code>toolname</code> and <code>tooldescription</code> keep the site's own names.</li>
+        </ul>
+        <h3>Result</h3>
+        <p>In a benchmark with a real LLM agent on 30 tasks across 30 public websites, AutoForms solved all 30. It used 1.94M input tokens in total, against 4.41M for Playwright MCP, 5.99M for agent-browser and 6.67M for Chrome DevTools MCP. It also cost the least ($2.22) and took the fewest browser actions (114 against 185 or more).<a class="cite" href="https://github.com/sumansauravsu6/AutoForms/blob/main/bridge/llm-eval/REPORT.md" target="_blank" rel="noopener" aria-label="Source: benchmark report">1</a></p>
+        <h3>Honest limits</h3>
+        <p>Each task ran once, and the same tasks were used during development, so a blind run on new sites is next. Closed shadow roots and cross-origin iframe forms aren't supported. Filtering hidden page text to defend against prompt injection is on the roadmap.</p>
+        <p class="case-links"><a href="https://github.com/sumansauravsu6/AutoForms" target="_blank" rel="noopener">Code on GitHub</a><a href="https://github.com/sumansauravsu6/AutoForms/blob/main/bridge/llm-eval/REPORT.md" target="_blank" rel="noopener">Benchmark report</a></p>
+      </div>
+    </dialog>
+
+    <dialog class="case" id="case-scout" aria-labelledby="case-scout-title">
+      <div class="case-inner">
+        <button class="case-close" type="button" aria-label="Close case study">×</button>
+        <p class="tile-kicker">2026, local desktop assistant</p>
+        <h2 id="case-scout-title">ScoutAI</h2>
+        <p class="case-lead">An observe-only, voice-enabled guide for any Windows workflow.</p>
+        <h3>Problem</h3>
+        <p>People follow long manuals for tools like Excel, Power BI or SAP, switching back and forth and missing steps. Agents that take over the mouse are risky in real work. People need to stay in control.</p>
+        <h3>What I built</h3>
+        <ul>
+          <li>Turns five source types (URLs, PDF, DOCX, Markdown, TXT) into interactive task checklists, using heading-aware BM25 retrieval to find the relevant instructions.</li>
+          <li>Watches the screen with Windows UI Automation, screenshots and Excel workbook context. It re-checks after mouse or window changes and highlights the right controls, but never clicks, types or moves the mouse.</li>
+          <li>Checks progress with deterministic UI rules first, then before-and-after vision checks. A step only counts as done once the change persists, which avoids false positives from flicker.</li>
+          <li>Offline voice commands (Vosk and Windows SAPI) and grounded Q&amp;A through local Ollama models, or Azure OpenAI.</li>
+        </ul>
+        <h3>Why it matters</h3>
+        <p>It's private by default: models run on the machine, and screenshots and documents stay local unless you choose Azure OpenAI.</p>
+        <p class="case-links"><a href="https://github.com/sumansauravsu6/ScoutAI" target="_blank" rel="noopener">Code on GitHub</a></p>
+      </div>
+    </dialog>
+
+    <dialog class="case" id="case-carto" aria-labelledby="case-carto-title">
+      <div class="case-inner">
+        <button class="case-close" type="button" aria-label="Close case study">×</button>
+        <p class="tile-kicker">2026, codebase onboarding agent</p>
+        <h2 id="case-carto-title">Cartographer</h2>
+        <p class="case-lead">Evidence-grounded codebase intelligence.</p>
+        <h3>Problem</h3>
+        <p>Joining a new codebase means weeks of tracing who calls what. LLM chat tools help, but they confidently describe code that doesn't exist.</p>
+        <h3>What I built</h3>
+        <ul>
+          <li>Static analysis first. AST analysis for Python and JS/TS/TSX builds a NetworkX knowledge graph of entry points, callers and dependencies, and traces execution flows with line-level source evidence.</li>
+          <li>Optional LLM explanations over secret-redacted evidence. Claims without a valid citation are thrown away. Search and every analysis page still work with no LLM at all.</li>
+          <li>A React and FastAPI interface with architecture and dependency graphs, change-impact analysis, risk heuristics, a graph-ranked reading path and an onboarding quiz.</li>
+        </ul>
+        <h3>Result</h3>
+        <p>All five planned phases are complete, from ingestion to change impact. It ships with a sample repository used in its tests and demos.</p>
+        <p class="case-links"><a href="https://github.com/sumansauravsu6/Cartographer" target="_blank" rel="noopener">Code on GitHub</a></p>
+      </div>
+    </dialog>
+
+    <dialog class="case" id="case-embed" aria-labelledby="case-embed-title">
+      <div class="case-inner">
+        <button class="case-close" type="button" aria-label="Close case study">×</button>
+        <p class="tile-kicker">2026, model training from scratch</p>
+        <h2 id="case-embed-title">EmbedLab</h2>
+        <p class="case-lead">Compact text-embedding models, from tokenizer to evaluation.</p>
+        <h3>Why</h3>
+        <p>I wanted to understand embeddings end to end instead of only calling an API, and to measure them properly.</p>
+        <h3>What I built</h3>
+        <ul>
+          <li>A 4-layer Transformer encoder from scratch (256 hidden size, 4 attention heads, 16,000-token vocabulary), sized to train on an 8 GB laptop GPU.</li>
+          <li>A byte-level BPE tokenizer and masked language modelling on WikiText-2, then dropout-based contrastive learning (two views of the same sentence form a positive pair) to produce normalized 256-dimensional embeddings.</li>
+          <li>Retrieval evaluation with Recall@K and MRR, plus a separate MiniLM fine-tuning workflow comparing STS-B similarity before and after training. It supports mixed precision and gradient accumulation.</li>
+        </ul>
+        <h3>Honest limits</h3>
+        <p>It's an educational model trained on WikiText-2. It shows the full pipeline and learns useful similarity, but it won't compete with models trained on billions of tokens.</p>
+        <p class="case-links"><a href="https://github.com/sumansauravsu6/EmbedLab" target="_blank" rel="noopener">Code on GitHub</a></p>
+      </div>
+    </dialog>
+
+    <!-- ═════════════════════════ EXPERIENCE ═════════════════════════ -->
+    <section class="block block-alt" id="experience" aria-labelledby="exp-title">
+      <div class="wrap exp">
+        <div class="block-head">
+          <h2 id="exp-title">Experience</h2>
+          <p>Production GenAI at Siemens Healthineers, after an internship at Microsoft.</p>
+        </div>
+
+        <ol class="timeline">
+          <li>
+            <p class="when">Aug 2025 to now, Bengaluru</p>
+            <h3>Software Developer, Generative AI <span>at Siemens Healthineers, GenAI Centre of Competence</span></h3>
+            <ul>
+              <li>Built a LangChain and Azure OpenAI assistant for Corrective and Preventive Action (CAPA). It grounds root-cause analysis in similar past cases, using English/German hybrid retrieval and exact-ID lookup.</li>
+              <li>Migrated the second version to Snowflake Cortex. Added Deep Research for case retrieval, and CAPA Check, which validates or drafts task descriptions against documented criteria.</li>
+              <li>Built a CAPA Process Guide grounded in a 300-page manual. It gives stage-specific next steps, expected outputs and preparation guidance.</li>
+              <li>Built a reusable Cortex evaluation agent: agent discovery, role-based CSV/Excel uploads to Snowflake stages, and configurable evaluation question counts.</li>
+            </ul>
+          </li>
+          <li>
+            <p class="when">May to Jul 2024, Bengaluru</p>
+            <h3>Software Development Engineer Intern <span>at Microsoft Advertising</span></h3>
+            <ul>
+              <li>Built an admin controller for metric management in TypeScript, C# and SQL. It replaced direct production-database updates with a controlled workflow.</li>
+              <li>The team reported an 85% improvement in admin efficiency from the automation.</li>
+            </ul>
+          </li>
+          <li>
+            <p class="when">Dec 2021 to Jun 2025</p>
+            <h3>B.Tech, Computer Science and Engineering <span>at NIT Rourkela</span></h3>
+            <ul>
+              <li>CGPA 8.38 out of 10.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ ABOUT ═════════════════════════ -->
+    <section class="block" id="about" aria-labelledby="about-title">
+      <div class="wrap about">
+        <figure class="portrait">
+          <img src="assets/profile.webp" alt="Suman Saurav in a dark suit, standing in front of the main building at NIT Rourkela" width="350" height="350" loading="lazy" decoding="async" />
+          <figcaption>At NIT Rourkela, where I studied computer science.</figcaption>
+        </figure>
+        <div class="about-text">
+          <h2 id="about-title">About</h2>
+          <p class="about-lead">I like AI that can show its work.</p>
+          <p>Most of what I build comes back to one idea: a model's answer should point to the evidence behind it. That means retrieval grounded in real documents, explanations that cite source lines, and assistants that watch and guide rather than take over.</p>
+          <p>Day to day, I build GenAI tools for quality processes in healthcare manufacturing. After hours I build agents that use the web (MCP and WebMCP), assistants that guide real-world tasks through a camera, and experiments on how long a model should think before it answers.</p>
+          <dl class="also">
+            <div><dt>Claude Code Hackathon 2026</dt><dd>Helped choose the use cases and judged submissions on technical implementation and practical value.</dd></div>
+            <div><dt>Competitive programming</dt><dd>Ranked 18th of about 27,000 in CodeChef Starters 69. 3-star CodeChef rating (1702) and 500+ LeetCode problems solved.</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════════════════════════ CONTACT ═════════════════════════ -->
+    <section class="block contact" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 id="contact-title">Let's talk</h2>
+        <p class="contact-lead">Building something with agents, retrieval or LLM evaluation? I'm happy to talk shop, compare notes, or hear about interesting roles. Email is the fastest way to reach me.</p>
+        <a class="mail" href="mailto:sumansauravsu9@gmail.com">sumansauravsu9@gmail.com</a>
+        <ul class="links">
+          <li><a href="https://www.linkedin.com/in/suman-saurav-a98394224/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/sumansauravsu6" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="assets/Suman_Saurav_Resume.pdf" download>Resume (PDF)</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Suman Saurav</p>
+      <p>Hand-built with HTML, CSS and a little JavaScript. No trackers.</p>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>

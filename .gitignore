@@ -1,0 +1,7 @@
+# Local tooling (Claude preview config)
+.claude/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
